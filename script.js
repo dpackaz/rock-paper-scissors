@@ -25,12 +25,12 @@
             //Play again?
             //If yes, start again, if no exit program
 
-function rockPaperScissors() {
+// Track wins, losses, and ties
+var wins = 0;
+var losses = 0;
+var ties = 0;
 
-    // Track wins, losses, and ties
-    var wins = 0;
-    var losses = 0;
-    var ties = 0;
+function rockPaperScissors() {
 
     do {
         //Prompt user to "Type R, S, or P"
@@ -109,7 +109,11 @@ function rockPaperScissors() {
 
     alert (result + "\r\n Wins: " + wins + "\r\n Losses: " + losses + "\r\n Ties: " + ties);
 
-    
+    var playAgain = confirm("Play Again?");
+
+    if (playAgain) {
+        rockPaperScissors();
+    }
 }
 
 rockPaperScissors();
