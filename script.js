@@ -59,6 +59,57 @@ function rockPaperScissors() {
     alert("The computer chose " + computerResult);
 
     console.log(computerResult);
+    console.log(userInput);
+    
+    var result = "";
+    if (userInput === 'r') {
+        if (computerResult === 'r') {
+            ties ++;
+            result = "It's a tie!";
+        }
+        if (computerResult === 'p') {
+            losses ++;
+            result = "You lose!";
+        }
+        if (computerResult === 's') {
+            wins ++;
+            result = "You win!";
+        }    
+    }
+
+    else if (userInput === 'p') {
+        if (computerResult === 'p') {
+            ties ++;
+            result = "It's a tie!";
+        }
+        if (computerResult === 's') {
+            losses ++;
+            result = "You lose!";
+        }
+        if (computerResult === 'r') {
+            wins ++;
+            result = "You win!";
+        }    
+    }
+
+    else if (userInput === 's') {
+        if (computerResult === 's') {
+            ties ++;
+            result = "It's a tie!";
+        }
+        if (computerResult === 'r') {
+            losses ++;
+            result = "You lose!";
+        }
+        if (computerResult === 'p') {
+            wins ++;
+            result = "You win!";
+        }    
+    }
+
+    alert (result + "\r\n Wins: " + wins + "\r\n Losses: " + losses + "\r\n Ties: " + ties);
+
+    
 }
 
 rockPaperScissors();
